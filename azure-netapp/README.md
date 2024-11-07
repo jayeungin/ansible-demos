@@ -12,4 +12,4 @@ After the execution environment image builds, you can view it by:
 Run the execution environment
 1. Podman CLI: podman exec -it <azure-netapp-ee>:<tag>
 2. Podman Desktop: Press the play button next to the image
-![alt text](<../images/start-ee.png>)
+![alt text](<./images/start-ee.png>)
