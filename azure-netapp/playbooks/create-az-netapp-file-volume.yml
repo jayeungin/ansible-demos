@@ -28,6 +28,6 @@
         adfs_authority_url: my-adfs-auth-url        
         append_tags: true
         cert_validation_mode: ignore
-        cloud_environment: "{{ cloud_env }}"
+        cloud_environment: myCloudEnvironment
         protocol_types: ["CIFS"]
         tags:
