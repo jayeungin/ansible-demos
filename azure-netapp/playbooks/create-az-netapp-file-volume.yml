@@ -1,0 +1,33 @@
+---
+- name: Create Azure NetApp Files volume with snapshot policy
+  hosts: localhost
+  become: yes
+  gather_facts: no
+  collections:
+    - netapp.azure
+    - azure.azcollection
+
+  tasks:
+    - name: ping
+      ping:
+      
+    - name: Create Azure NetApp volume for Windows      
+      netapp.azure.azure_rm_netapp_volume:
+        state: present
+        name: myVolume
+        resource_group: myResourceGroup
+        account_name: myAccountName
+        pool_name: myPoolName
+        location: eastus
+        file_path: tests-volume2
+        virtual_network: my-vnet
+        vnet_resource_group_for_subnet: my-vnet-rg
+        subnet_name: mySubnet     
+        service_level: myService   
+        size: 100GiB    
+        adfs_authority_url: my-adfs-auth-url        
+        append_tags: true
+        cert_validation_mode: ignore
+        cloud_environment: "{{ cloud_env }}"
+        protocol_types: ["CIFS"]
+        tags:
