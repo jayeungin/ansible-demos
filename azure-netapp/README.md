@@ -32,7 +32,7 @@ ansible [core 2.15.13]
   jinja version = 3.1.4
   libyaml = True
 ```
-2. List Ansible collections
+2. List Ansible collections: `ansible-galaxy collection list`
 ```
 bash-5.1$ ansible-galaxy collection list
 
