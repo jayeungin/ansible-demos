@@ -2,3 +2,4 @@
 .vscode/settings.json
 ansible.cfg
 .devcontainer/*
+ansible-navigator.log
